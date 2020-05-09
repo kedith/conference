@@ -26,7 +26,7 @@ defmodule Conference.MixProject do
       {:postgrex, "~> 0.15"},
       {:plug, "~> 1.6"},
       {:cowboy, "~> 2.4"},
-      {:plug_cowboy, "~> 2.0"}
+      {:git_hooks, "~> 0.4.0", only: [:test, :dev], runtime: false}
     ]
   end
 end
