@@ -1,8 +1,9 @@
 # Conference
 
 To prepare the db:
-1. Check the config file and adjust your database settings
-2. run 'mix ecto.migrate' to run all migrations or 'mix ecto.migrate -r Custom.Repo' for each repo with the coresponding name
+1. Create a database named Conference in postgres
+2. Check the config file and adjust your database settings
+3. Run 'mix ecto.migrate' to run all migrations or 'mix ecto.migrate -r Custom.Repo' for each repo with the coresponding name
 
 ## Installation
 
