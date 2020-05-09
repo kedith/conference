@@ -16,15 +16,3 @@ cache:
     - deps
 script:
   - mix git_hooks.run all
-deploy:
-  # https://docs.travis-ci.com/user/deployment/script/
-  # > `script` must be a scalar pointing to an executable file or command.
-  provider: script
-  # http://yaml.org/spec/1.2/spec.html#id2779048
-  # `>-` indicates the line folding.
-  script: >-
-    mix deps.get &&
-    mix hex.publish --yes &&
-    git clean -f
-  on:
-    tags: true
