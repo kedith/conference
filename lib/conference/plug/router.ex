@@ -12,6 +12,8 @@ defmodule Conference.Plug.Router do
     plug Plug.Parsers, parsers: [:urlencoded, :multipart]
   
     plug(:dispatch)
+
+    forward("/article",to: Conference.Plug.ArticleController)
   
     defp handle_errors(conn, %{kind: kind, reason: reason, stack: stack}) do
       IO.inspect(kind, label: :kind)
