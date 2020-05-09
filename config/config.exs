@@ -2,7 +2,7 @@ import Config
 
 config :conference, Conference.Repository.ArticleRepo,
        username: "postgres",
-       password: "admin",
+       password: "root",
        database: "Conference",
        hostname: "localhost",
        port: "5432",
@@ -10,7 +10,7 @@ config :conference, Conference.Repository.ArticleRepo,
 
 config :conference, Conference.Repository.TalkRepo,
        username: "postgres",
-       password: "admin",
+       password: "root",
        database: "Conference",
        hostname: "localhost",
        port: "5432",
@@ -21,7 +21,7 @@ config :conference, ecto_repos: [Conference.Repository.UserDetailsRepo, Conferen
 
 config :conference, Conference.Repository.UserDetailsRepo,
        username: "postgres",
-       password: "admin",
+       password: "root",
        database: "Conference",
        hostname: "localhost",
        port: "5432",

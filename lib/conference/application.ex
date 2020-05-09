@@ -7,6 +7,14 @@ defmodule Conference.Application do
 
   defp children do
     [
+      {
+        Plug.Adapters.Cowboy,
+        scheme: :http,
+        plug: Conference.Plug.Router,
+        options: [
+          port: 4000
+        ]
+      },
       Conference.Repository.UserDetailsRepo
     ]
   end
