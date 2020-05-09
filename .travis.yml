@@ -3,7 +3,7 @@ elixir:
   - 1.10
 sudo: false
 otp_release:
-  - 21
+  - 21.0
 env:
   global:
     - HEX_USERNAME=conf
