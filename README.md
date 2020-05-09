@@ -1,6 +1,8 @@
 # Conference
 
-**TODO: Add description**
+To prepare the db:
+1. Check the config file and adjust jour database settings
+2. run 'mix ecto.migrate' to run all migrations or 'mix ecto.migrate -r Custom.Repo' for each repo with the coresponding name
 
 ## Installation
 
@@ -18,4 +20,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/conference](https://hexdocs.pm/conference).
-
