@@ -1,8 +1,9 @@
 language: elixir
-elixir: '1.10'
+elixir:
+  - 1.10
 sudo: false
 otp_release:
-  - 20
+  - 20.0
 env:
   global:
     - HEX_USERNAME=conf
