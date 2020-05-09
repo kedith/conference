@@ -24,10 +24,7 @@ deploy:
   # `>-` indicates the line folding.
   script: >-
     mix deps.get &&
-    mix hex.config username "$HEX_USERNAME" &&
-    (mix hex.config encrypted_key "$HEX_ENCRYPTED_KEY" > /dev/null 2>&1) &&
-    (echo "$HEX_PASSPHRASE"\\nY | mix hex.publish) &&
-    mix clean &&
-    mix deps.clean --all
+    mix hex.publish --yes &&
+    git clean -f
   on:
     tags: true
