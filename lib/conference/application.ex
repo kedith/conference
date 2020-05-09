@@ -10,7 +10,7 @@ defmodule Conference.Application do
       {
         Plug.Adapters.Cowboy,
         scheme: :http,
-        plug: User.Plug.Router,
+        plug: Conference.Plug.Router,
         options: [
           port: 4000
         ]
