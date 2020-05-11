@@ -15,7 +15,10 @@ defmodule Conference.Application do
           port: 4000
         ]
       },
-      Conference.Repository.UserDetailsRepo
+      Conference.Repository.ArticleRepo,
+      Conference.Repository.UserDetailsRepo,
+      Conference.Repository.TalkRepo,
+
     ]
   end
 

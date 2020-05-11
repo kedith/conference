@@ -13,6 +13,20 @@ defmodule Conference.Plug.ArticleController do
             |> send_resp(200, Poison.encode!(new_article))
     end
 
-    
+    get "/filter/domain" do
+            conn
+            |> put_resp_content_type("application/json")
+            |> send_resp(200, Poison.encode!(ARepo.get_articles_by_domain(Map.get(conn.params, "domain", nil))))
+    end
+
+    @doc """
+        Filter after any fields, if you do not want some, let them empty
+    """
+    get "/filter/author" do
+        
+        conn
+        |> put_resp_content_type("application/json")
+        |> send_resp(200, Poison.encode!(ARepo.get_articles_by_author(Map.get(conn.params, "author_id", 1))))
+    end
 
 end
