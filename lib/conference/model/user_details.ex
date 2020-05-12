@@ -8,4 +8,8 @@ defmodule Conference.Model.UserDetails do
     field :affiliation, :string
   end
 
+  def changeset(struct, params) do
+    struct
+    |> cast(params, [:first_name, :last_name, :affiliation])
+  end
 end

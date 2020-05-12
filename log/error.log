@@ -1,0 +1,5 @@
+2020-05-09 20:17:19.620 [error] <0.383.0> gen_server <0.383.0> terminated with reason: {socket_error,timeout}
+2020-05-09 20:17:19.658 [error] <0.378.0> gen_server <0.378.0> terminated with reason: {socket_error,timeout}
+2020-05-09 20:17:21.521 [error] <0.378.0> CRASH REPORT Process <0.378.0> with 0 neighbours exited with reason: {socket_error,timeout} in gen_server:handle_common_reply/8 line 751
+2020-05-09 20:17:21.555 [error] <0.376.0> Supervisor {<0.376.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.377.0>, {amqp_params_network,<<"guest">>,<<"jwCOBLkSqFXmiA+/vmtiUa9vznwLqAgnQSnsmwvu0+F5W4PjzlQHi/WgVNwAnq...">>,...}) at <0.378.0> exit with reason {socket_error,timeout} in context child_terminated
+2020-05-09 20:17:21.556 [error] <0.376.0> Supervisor {<0.376.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.377.0>, {amqp_params_network,<<"guest">>,<<"jwCOBLkSqFXmiA+/vmtiUa9vznwLqAgnQSnsmwvu0+F5W4PjzlQHi/WgVNwAnq...">>,...}) at <0.378.0> exit with reason reached_max_restart_intensity in context shutdown
