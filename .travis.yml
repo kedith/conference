@@ -6,9 +6,8 @@ otp_release:
   - 21.0
 env:
   global:
-    - HEX_USERNAME=conf
     # Follow other language's environment
-    # e.g.) `RACK_ENV=test` has been setted as Default Environment Variables
+    # e.g.) `RACK_ENV=test` has been set as Default Environment Variables
     # https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
     - MIX_ENV=test
 cache:
