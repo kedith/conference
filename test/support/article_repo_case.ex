@@ -22,19 +22,4 @@ defmodule Conference.ArticleRepoCase do
       Ecto.Adapters.SQL.Sandbox.mode(Conference.Repository.UserDetailsRepo, {:shared, self()})
     end
   end
-
-  defp children do
-    [
-      Conference.Repository.UserDetailsRepo,
-      Conference.Repository.ArticleRepo,
-      Conference.Repository.TalkRepo
-    ]
-  end
-
-  defp opts do
-    [
-      strategy: :one_for_one,
-      name: Conference.Supervisor
-    ]
-  end
 end
