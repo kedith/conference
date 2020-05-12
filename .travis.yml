@@ -7,7 +7,7 @@ otp_release:
 env:
   global:
     - MIX_ENV=test
-    - DOCKER_COMPOSE_VERSION=1.4.2
+    - DOCKER_COMPOSE_VERSION=1.23.1
 cache:
   directories:
     - _build
