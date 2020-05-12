@@ -12,7 +12,6 @@ if Mix.env() != :prod do
            pre_commit: [
              tasks: [
                "mix clean",
-               "mix compile --warnings-as-errors",
                "mix test"
              ]
            ]
