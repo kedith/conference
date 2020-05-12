@@ -6,19 +6,10 @@ otp_release:
 env:
   global:
     - MIX_ENV=test
-    - DOCKER_COMPOSE_VERSION=1.23.1
 cache:
   directories:
     - _build
     - deps
-before_install:
-  - sudo apt-get update
-  - docker-compose --version # Print out the current docker-compose version.
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-  - docker-compose --version # Check that docker-compose is now running the latest version
 before_script:
   - echo "Before Script:"
   - docker-compose up --build -d
