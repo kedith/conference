@@ -6,13 +6,20 @@ otp_release:
   - 21.0
 env:
   global:
-    # Follow other language's environment
-    # e.g.) `RACK_ENV=test` has been set as Default Environment Variables
-    # https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
     - MIX_ENV=test
+    - DOCKER_COMPOSE_VERSION=1.4.2
 cache:
   directories:
     - _build
     - deps
+before_install:
+  - sudo apt-get update
+  - docker-compose --version # Print out the current docker-compose version.
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose --version # Check that docker-compose is now running the latest version
+  - docker-compose up
 script:
   - mix git_hooks.run all
