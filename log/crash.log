@@ -1,0 +1,400 @@
+2020-05-12 13:43:18 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{undef,[{'Elixir.Conference.Consumer',start_link,[[]],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 13:43:18 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.474.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{'EXIT',{undef,[{'Elixir.Conference.Consumer',start_link,[[]],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.473.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.475.0>,normal}]
+    links: [<0.473.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 247
+  neighbours:
+2020-05-12 14:52:46 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{undef,[{'Elixir.Conference.Consumer',start_link,[[]],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 14:52:46 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.391.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{'EXIT',{undef,[{'Elixir.Conference.Consumer',start_link,[[]],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.390.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.392.0>,normal}]
+    links: [<0.390.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 247
+  neighbours:
+2020-05-12 16:32:19 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Conference.Plug.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2020-05-12 16:32:19 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.387.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"c:/Users/M_P20/Documents/ProiecteScalabile/Microservices_Elixir/conference/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,295}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.385.0>,'Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.385.0>]
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 4478
+  neighbours:
+2020-05-12 16:32:19 =SUPERVISOR REPORT====
+     Supervisor: {<0.385.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Conference.Plug.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2020-05-12 16:32:19 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Conference.Plug.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Conference.Plug.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4000}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Conference.Plug.Router',[]}}]}]},stream_handlers => ['Elixir.Plug.Cowboy.Stream']}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2020-05-12 16:32:19 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.382.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Conference.Plug.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse}}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.381.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.383.0>,normal}]
+    links: [<0.381.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 214
+  neighbours:
+2020-05-12 16:35:38 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Conference.Plug.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2020-05-12 16:35:38 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.386.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"c:/Users/M_P20/Documents/ProiecteScalabile/Microservices_Elixir/conference/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,295}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.384.0>,'Elixir.Conference.Supervisor',<0.382.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 4484
+  neighbours:
+2020-05-12 16:35:38 =SUPERVISOR REPORT====
+     Supervisor: {<0.384.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Conference.Plug.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2020-05-12 16:35:38 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Conference.Plug.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Conference.Plug.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4000}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Conference.Plug.Router',[]}}]}]},stream_handlers => ['Elixir.Plug.Cowboy.Stream']}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2020-05-12 16:35:38 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.381.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Conference.Plug.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Conference.Plug.Router.HTTP',eaddrinuse}}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.380.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.382.0>,normal}]
+    links: [<0.380.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 214
+  neighbours:
+2020-05-12 16:47:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 16:47:24 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Conference.Consumer:init/1
+    pid: <0.488.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Conference.Consumer',setup_queue,1,[{file,"lib/consumer.ex"},{line,51}]},{'Elixir.Conference.Consumer',init,1,[{file,"lib/consumer.ex"},{line,19}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 14981
+  neighbours:
+2020-05-12 16:47:24 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.382.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.381.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.383.0>,normal}]
+    links: [<0.381.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-05-12 16:51:49 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Conference.Consumer:init/1
+    pid: <0.488.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Conference.Consumer',setup_queue,1,[{file,"lib/consumer.ex"},{line,51}]},{'Elixir.Conference.Consumer',init,1,[{file,"lib/consumer.ex"},{line,19}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 14981
+  neighbours:
+2020-05-12 16:56:24 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Conference.Consumer:init/1
+    pid: <0.488.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Conference.Consumer',setup_queue,1,[{file,"lib/consumer.ex"},{line,51}]},{'Elixir.Conference.Consumer',init,1,[{file,"lib/consumer.ex"},{line,19}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 14980
+  neighbours:
+2020-05-12 16:56:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 16:56:24 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.382.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.381.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.383.0>,normal}]
+    links: [<0.381.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-05-12 16:57:52 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 16:57:52 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Conference.Consumer:init/1
+    pid: <0.488.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Conference.Consumer',setup_queue,1,[{file,"lib/consumer.ex"},{line,51}]},{'Elixir.Conference.Consumer',init,1,[{file,"lib/consumer.ex"},{line,19}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 14981
+  neighbours:
+2020-05-12 16:57:52 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.382.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.381.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.383.0>,normal}]
+    links: [<0.381.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-05-12 16:58:13 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Conference.Consumer:init/1
+    pid: <0.488.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Conference.Consumer',setup_queue,1,[{file,"lib/consumer.ex"},{line,51}]},{'Elixir.Conference.Consumer',init,1,[{file,"lib/consumer.ex"},{line,19}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 14981
+  neighbours:
+2020-05-12 16:58:13 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 16:58:13 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.382.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.381.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.383.0>,normal}]
+    links: [<0.381.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-05-12 17:01:18 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Conference.Supervisor'}
+     Context:    start_error
+     Reason:     {{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-05-12 17:01:18 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Conference.Consumer:init/1
+    pid: <0.488.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Conference.Consumer',setup_queue,1,[{file,"lib/consumer.ex"},{line,51}]},{'Elixir.Conference.Consumer',init,1,[{file,"lib/consumer.ex"},{line,19}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Conference.Supervisor',<0.383.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.384.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 14980
+  neighbours:
+2020-05-12 17:01:18 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.382.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'gen_server_test_queue' in vhost '/': received none but current is the value '' of type 'longstr'">>}},{gen_server,call,[<0.502.0>,{call,{'queue.declare',0,<<"gen_server_test_queue">>,false,true,false,false,false,[]},none,<0.488.0>},60000]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.381.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.381.0>,<0.383.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 221
+  neighbours:
+2020-05-12 20:49:12 =ERROR REPORT====
+** Generic server <0.514.0> terminating 
+** Last message in was {timeout,#Ref<0.2124404497.3749183490.242805>,idle_timeout}
+** When Server state == {state,#Port<0.5>,#Ref<0.2124404497.3749183490.242805>,<0.508.0>,<0.512.0>,{method,rabbit_framing_amqp_0_9_1},{expecting_header,<<>>}}
+** Reason for termination ==
+** {socket_error,timeout}
+2020-05-12 20:49:12 =ERROR REPORT====
+** Generic server <0.508.0> terminating 
+** Last message in was {socket_error,timeout}
+** When Server state == {state,amqp_network_connection,{state,#Port<0.5>,<<"client 127.0.0.1:51053 -> 127.0.0.1:5672">>,10,<0.513.0>,131072,<0.507.0>,undefined,false},<0.512.0>,{amqp_params_network,<<"guest">>,<<"rV+WLu8hL+90XoVSWCdzLdCIFbR+lb0ua4urwf9bwa6zadzhEUDb9pydvqEKZWmp">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@LAPTOP-20EJO5P9">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2020 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL 1.1. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 22.3">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.3">>}],none,false}
+** Reason for termination ==
+** {socket_error,timeout}
+2020-05-12 20:49:12 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_connection:init/1
+    pid: <0.508.0>
+    registered_name: []
+    exception exit: {{socket_error,timeout},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,751}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.506.0>,amqp_sup,<0.303.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.506.0>]
+    dictionary: [{gen_server_call_timeout,60000},{process_name,{amqp_gen_connection,<<"client 127.0.0.1:51053 -> 127.0.0.1:5672">>}}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 28531
+  neighbours:
+2020-05-12 20:49:12 =SUPERVISOR REPORT====
+     Supervisor: {<0.506.0>,amqp_connection_sup}
+     Context:    child_terminated
+     Reason:     {socket_error,timeout}
+     Offender:   [{pid,<0.508.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.507.0>,{amqp_params_network,<<"guest">>,<<"rV+WLu8hL+90XoVSWCdzLdCIFbR+lb0ua4urwf9bwa6zadzhEUDb9pydvqEKZWmp">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2020-05-12 20:49:12 =SUPERVISOR REPORT====
+     Supervisor: {<0.506.0>,amqp_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.508.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.507.0>,{amqp_params_network,<<"guest">>,<<"rV+WLu8hL+90XoVSWCdzLdCIFbR+lb0ua4urwf9bwa6zadzhEUDb9pydvqEKZWmp">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+

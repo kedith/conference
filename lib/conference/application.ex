@@ -12,9 +12,10 @@ defmodule Conference.Application do
         scheme: :http,
         plug: Conference.Plug.Router,
         options: [
-          port: 4000
+          port: 4500
         ]
       },
+      {Conference.Consumer,[]},
       Conference.Repository.ArticleRepo,
       Conference.Repository.UserDetailsRepo,
       Conference.Repository.TalkRepo,
