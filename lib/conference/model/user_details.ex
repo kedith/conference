@@ -10,7 +10,6 @@ defmodule Conference.Model.UserDetails do
 
   def changeset(struct, params) do
     struct
-    |> cast(params,[:first_name, :last_name, :affiliation])
+    |> cast(params, [:first_name, :last_name, :affiliation])
   end
-
 end

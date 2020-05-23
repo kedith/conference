@@ -1,0 +1,19 @@
+language: elixir
+elixir:
+  - 1.10
+otp_release:
+  - 21.0
+env:
+  global:
+    - MIX_ENV=test
+cache:
+  directories:
+    - _build
+    - deps
+before_script:
+  - echo "Before Script:"
+  - docker-compose up --build -d
+script:
+  - mix git_hooks.run all
+after_script:
+  - docker-compose down

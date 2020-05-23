@@ -14,14 +14,7 @@ defmodule Conference.Plug.Router do
     plug(:dispatch)
 
     forward("/article",to: Conference.Plug.ArticleController)
-  
-    defp handle_errors(conn, %{kind: kind, reason: reason, stack: stack}) do
-      IO.inspect(kind, label: :kind)
-      IO.inspect(reason, label: :reason)
-      IO.inspect(stack, label: :stack)
-      send_resp(conn, conn.status, "Something went wrong")
-    end
-  
+
     match _ do
       send_resp(conn, 404, "Page not found!")
     end

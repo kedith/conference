@@ -1,7 +1,6 @@
 defmodule Conference.Model.Talk do
     use Ecto.Schema
-    import Ecto.Changeset
-  
+
     schema "talks" do
       belongs_to :article, Conference.Model.Article
       field :start_time, :utc_datetime

@@ -1,24 +1,19 @@
-2020-05-12 13:43:18 =SUPERVISOR REPORT====
-     Supervisor: {local,'Elixir.Conference.Supervisor'}
-     Context:    start_error
-     Reason:     {'EXIT',{undef,[{'Elixir.Conference.Consumer',start_link,[[]],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}
-     Offender:   [{pid,undefined},{id,'Elixir.Conference.Consumer'},{mfargs,{'Elixir.Conference.Consumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
-
-2020-05-12 13:43:18 =CRASH REPORT====
+2020-05-09 16:27:40 =CRASH REPORT====
   crasher:
     initial call: application_master:init/4
-    pid: <0.474.0>
+    pid: <0.753.0>
     registered_name: []
-    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Conference.Consumer',{'EXIT',{undef,[{'Elixir.Conference.Consumer',start_link,[[]],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}}},{'Elixir.Conference.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
-    ancestors: [<0.473.0>]
+    exception exit: {{bad_return,{{'Elixir.Conference.Application',start,[normal,[]]},{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.UndefinedFunctionError',arity => 1,function => init,message => nil,module => 'Elixir.User.Plug.Router',reason => nil},[{'Elixir.User.Plug.Router',init,[[]],[]},{'Elixir.Plug.Cowboy',dispatch_for,2,[{file,"lib/plug/cowboy.ex"},{line,305}]},{'Elixir.Plug.Cowboy',to_args,5,[{file,"lib/plug/cowboy.ex"},{line,244}]},{'Elixir.Plug.Cowboy',child_spec,1,[{file,"lib/plug/cowboy.ex"},{line,170}]},{'Elixir.Supervisor',init_child,1,[{file,"lib/supervisor.ex"},{line,626}]},{'Elixir.Enum','-map/2-lists^map/1-0-',2,[{file,"lib/enum.ex"},{line,1396}]},{'Elixir.Supervisor',init,2,[{file,"lib/supervisor.ex"},{line,617}]},{'Elixir.Supervisor',start_link,2,[{file,"lib/supervisor.ex"},{line,556}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.752.0>]
     message_queue_len: 1
-    messages: [{'EXIT',<0.475.0>,normal}]
-    links: [<0.473.0>,<0.44.0>]
+    messages: [{'EXIT',<0.754.0>,normal}]
+    links: [<0.752.0>,<0.43.0>]
     dictionary: []
     trap_exit: true
     status: running
     heap_size: 987
     stack_size: 27
+<<<<<<< HEAD
     reductions: 247
   neighbours:
 2020-05-12 14:52:46 =SUPERVISOR REPORT====
@@ -397,4 +392,48 @@ Failed to start Ranch listener 'Elixir.Conference.Plug.Router.HTTP' in ranch_tcp
      Context:    shutdown
      Reason:     reached_max_restart_intensity
      Offender:   [{pid,<0.508.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.507.0>,{amqp_params_network,<<"guest">>,<<"rV+WLu8hL+90XoVSWCdzLdCIFbR+lb0ua4urwf9bwa6zadzhEUDb9pydvqEKZWmp">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+=======
+    reductions: 248
+  neighbours:
+2020-05-09 20:17:19 =ERROR REPORT====
+** Generic server <0.383.0> terminating 
+** Last message in was {timeout,#Ref<0.2491173403.3848273921.161846>,idle_timeout}
+** When Server state == {state,#Port<0.14>,#Ref<0.2491173403.3848273921.161846>,<0.378.0>,<0.380.0>,{method,rabbit_framing_amqp_0_9_1},{expecting_header,<<>>}}
+** Reason for termination ==
+** {socket_error,timeout}
+2020-05-09 20:17:19 =ERROR REPORT====
+** Generic server <0.378.0> terminating 
+** Last message in was {socket_error,timeout}
+** When Server state == {state,amqp_network_connection,{state,#Port<0.14>,<<"client 127.0.0.1:56710 -> 127.0.0.1:5672">>,10,<0.381.0>,131072,<0.377.0>,undefined,false},<0.380.0>,{amqp_params_network,<<"guest">>,<<"jwCOBLkSqFXmiA+/vmtiUa9vznwLqAgnQSnsmwvu0+F5W4PjzlQHi/WgVNwAnqxN">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@09dc4c83e700">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2020 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL 1.1. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 22.3.3">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.3">>}],none,false}
+** Reason for termination ==
+** {socket_error,timeout}
+2020-05-09 20:17:21 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_connection:init/1
+    pid: <0.378.0>
+    registered_name: []
+    exception exit: {{socket_error,timeout},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,751}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.376.0>,amqp_sup,<0.278.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.376.0>]
+    dictionary: [{gen_server_call_timeout,60000},{process_name,{amqp_gen_connection,<<"client 127.0.0.1:56710 -> 127.0.0.1:5672">>}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 28719
+  neighbours:
+2020-05-09 20:17:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.376.0>,amqp_connection_sup}
+     Context:    child_terminated
+     Reason:     {socket_error,timeout}
+     Offender:   [{pid,<0.378.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.377.0>,{amqp_params_network,<<"guest">>,<<"jwCOBLkSqFXmiA+/vmtiUa9vznwLqAgnQSnsmwvu0+F5W4PjzlQHi/WgVNwAnqxN">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2020-05-09 20:17:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.376.0>,amqp_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.378.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.377.0>,{amqp_params_network,<<"guest">>,<<"jwCOBLkSqFXmiA+/vmtiUa9vznwLqAgnQSnsmwvu0+F5W4PjzlQHi/WgVNwAnqxN">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+>>>>>>> bf27dc8d83c912f7c0e63ba9773a2cf7fd8e293d
 
