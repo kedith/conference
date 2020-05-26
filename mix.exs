@@ -44,7 +44,7 @@ defmodule Conference.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:poison, "~> 3.0"},
       {:joken, "~> 2.2.0"},
-      {:jsonapi, "~> 1.3"},
+      {:jsonapi, "~> 1.3"}
     ]
   end
 end

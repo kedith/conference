@@ -5,7 +5,7 @@ config :conference, ecto_repos: [Conference.Repository.UserDetailsRepo, Conferen
 
 import_config "#{Mix.env()}.exs" #import test environment
 
-if Mix.env() != :prod do
+if Mix.env() != :prod && Mix.env() != :dev do
   config :git_hooks,
          verbose: true,
          hooks: [
