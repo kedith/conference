@@ -11,7 +11,6 @@ RUN mix local.hex --force && \
     mix local.rebar --force
 
 #Copy the source folder into the Docker image
-COPY rel ./rel
 COPY config ./config
 COPY lib ./lib
 COPY priv ./priv
