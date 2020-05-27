@@ -22,6 +22,7 @@ RUN mix deps.get
 RUN mix release
 
 COPY entrypoint.sh .
+RUN chmod a+rx entrypoint.sh
 
 #Set default entrypoint and command
 CMD ["./entrypoint.sh"]
