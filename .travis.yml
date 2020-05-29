@@ -3,6 +3,7 @@ elixir:
   - 1.10
 otp_release:
   - 21.0
+services: docker
 env:
   global:
     - MIX_ENV=test
@@ -17,3 +18,8 @@ script:
   - mix git_hooks.run all
 after_script:
   - docker-compose down
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    all_branches: true
