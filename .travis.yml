@@ -17,7 +17,7 @@ before_script:
 script:
   - mix git_hooks.run all
 after_script:
-  - docker tag conference-service kedith/conference
+  - docker tag conference_web kedith/conference
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push kedith/conference
   - docker-compose down
