@@ -21,7 +21,7 @@ jobs:
     - stage: build docker image
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - docker build -t conference_serivce .
+        - docker build -t conference_service .
         - docker images
         - docker tag conference_service $DOCKER_USERNAME/conference
         - docker push $DOCKER_USERNAME/conference
