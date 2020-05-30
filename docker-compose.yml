@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     container_name: conference-service
-    build: .
+    image: kedith/conference:latest
     restart: always
     ports:
       - "4004:4000"
