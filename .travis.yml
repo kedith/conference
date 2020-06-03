@@ -28,5 +28,5 @@ jobs:
         - mix local.rebar --force
         - docker-compose up -d
       script:
-        - mix git_hooks.run all
+        - mix test
         - docker-compose down
