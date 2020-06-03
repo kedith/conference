@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :conference, Conference.Repository.ArticleRepo,
        username: "postgres",

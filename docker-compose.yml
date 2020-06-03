@@ -1,14 +1,70 @@
 version: '3.7'
 
 services:
-  postgres:
-    image: postgres:12.0
+  conference:
+    container_name: conference-service
+    image: kedith/conference:latest
+    restart: always
     ports:
-      - '5432:5432'
+      - 4004:4000
+    depends_on:
+      - confDb
+      - rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_HOST: rabbitmq
+  user:
+    image: kedith/user-conference:latest
+    container_name: user-service
+    ports:
+      - 4005:4000
+    depends_on:
+      - userDb
+      - rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_HOST: rabbitmq
+  confDb:
+    container_name: db
+    image: postgres:11.0
+    restart: always
+    ports:
+      - 5432:5432
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-    env_file:
-      - postgres-variables.env
-
+      - db-data:/var/lib/confDb
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "Conference"
+      PGDATA: "/var/lib/postgresql/data"
+  userDb:
+    image: postgres:11.0
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_DB: "User"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - data-volume:/var/lib/userDb
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-container
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - etc-rabbit-volume:/var/etc/rabbitmq/
+      - data-rabbit-volume:/var/lib/rabbitmq/
+      - logs-rabbit-volume:/var/log/rabbitmq/
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
 volumes:
-  postgres-data:
+  db-data:
+  data-volume:
+  etc-rabbit-volume:
+  data-rabbit-volume:
+  logs-rabbit-volume:

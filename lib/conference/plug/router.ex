@@ -14,6 +14,7 @@ defmodule Conference.Plug.Router do
     plug(:dispatch)
 
     forward("/article",to: Conference.Plug.ArticleController)
+    forward("/user",to: Conference.Plug.UserController)
 
     match _ do
       send_resp(conn, 404, "Page not found!")

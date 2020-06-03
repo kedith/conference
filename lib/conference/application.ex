@@ -15,6 +15,7 @@ defmodule Conference.Application do
           port: 4000
         ]
       },
+      {Conference.Consumer, []},
       Conference.Repository.ArticleRepo,
       Conference.Repository.UserDetailsRepo,
       Conference.Repository.TalkRepo,
@@ -22,10 +23,10 @@ defmodule Conference.Application do
     ]
   end
 
-    defp opts do
-      [
-        strategy: :one_for_one,
-        name: Conference.Supervisor
-      ]
-    end
+  defp opts do
+    [
+      strategy: :one_for_one,
+      name: Conference.Supervisor
+    ]
+  end
 end
