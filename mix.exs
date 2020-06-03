@@ -45,7 +45,7 @@ defmodule Conference.MixProject do
       {:poison, "~> 3.0"},
       {:joken, "~> 2.2.0"},
       {:jsonapi, "~> 1.3"},
-      {:amqp, "~> 1.0"}
+      {:amqp, "~> 1.4"}
     ]
   end
 end
