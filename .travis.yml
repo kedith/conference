@@ -29,6 +29,7 @@ jobs:
       install:
         - docker-compose up -d
         - mix local.hex --force
+        - mix local.rebar --force
       script:
         - mix git_hooks.run all
         - docker-compose down
