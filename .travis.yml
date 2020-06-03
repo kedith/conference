@@ -27,9 +27,9 @@ jobs:
         - docker push $DOCKER_USERNAME/conference
     - stage: test
       install:
-        - docker-compose up -d
         - mix local.hex --force
         - mix local.rebar --force
+        - docker-compose up -d
       script:
         - mix git_hooks.run all
         - docker-compose down
