@@ -6,12 +6,7 @@ otp_release:
   - 21.0
 services: 
   - docker
-  - rabbitmq
 
-addons:
-  apt:
-    packages:
-      - rabbitmq-server
 cache:
   directories:
     - _build
