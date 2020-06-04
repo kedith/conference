@@ -14,7 +14,7 @@ defmodule Conference.Consumer do
     hostname = System.get_env("RABBITMQ_HOST")
     username = System.get_env("RABBITMQ_DEFAULT_USER")
     password = System.get_env("RABBITMQ_DEFAULT_PASS")
-    options = [host: hostname, port: 5672, virtual_host: "/", username: username, password: password]
+    options = [host: hostname, port: System.get_env("RABBITMQ_PORT"), virtual_host: "/", username: username, password: password]
 
     {:ok, conn} = Connection.open(options, :undefined)
     {:ok, chan} = Channel.open(conn)
