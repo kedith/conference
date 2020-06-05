@@ -9,12 +9,14 @@ services:
       - 4004:4000
     depends_on:
       - confDb
+      - rabbitmq: 
+        condition: service_healthy
+    links:
       - rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
       RABBITMQ_HOST: rabbitmq
-      RABBITMQ_PORT: 5672
   user:
     image: kedith/user-conference:latest
     container_name: user-service
@@ -22,6 +24,9 @@ services:
       - 4005:4000
     depends_on:
       - userDb
+      - rabbitmq:
+        condition: service_healthy
+    links:
       - rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: guest
@@ -56,6 +61,11 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
+    healthcheck: 
+      test: ["CMD", "curl","-f", "http://localhost:15672"]
+      interval: 30s
+      timeout: 20s
+      retries: 5
     volumes:
       - etc-rabbit-volume:/var/etc/rabbitmq/
       - data-rabbit-volume:/var/lib/rabbitmq/

@@ -6,7 +6,6 @@ otp_release:
   - 21.0
 services: 
   - docker
-
 cache:
   directories:
     - _build
