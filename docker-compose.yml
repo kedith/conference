@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2.1'
 
 services:
   conference:
@@ -9,8 +9,7 @@ services:
       - 4004:4000
     depends_on:
       - confDb
-      - rabbitmq: 
-        condition: service_healthy
+      - rabbitmq
     links:
       - rabbitmq
     environment:
@@ -24,8 +23,7 @@ services:
       - 4005:4000
     depends_on:
       - userDb
-      - rabbitmq:
-        condition: service_healthy
+      - rabbitmq
     links:
       - rabbitmq
     environment:
@@ -63,8 +61,8 @@ services:
       - 15672:15672
     healthcheck: 
       test: ["CMD", "curl","-f", "http://localhost:15672"]
-      interval: 30s
-      timeout: 20s
+      interval: 50s
+      timeout: 10s
       retries: 5
     volumes:
       - etc-rabbit-volume:/var/etc/rabbitmq/
