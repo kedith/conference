@@ -9,13 +9,10 @@ services:
       - 4004:4000
     depends_on:
       - confDb
-      - rabbitmq
-    links:
-      - rabbitmq
     environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_DEFAULT_USER: tfavcusn
+      RABBITMQ_DEFAULT_PASS: vr7hadAWY3fVvmTMgUJ-VwDsf_otp7yU
+      RABBITMQ_HOST: kangaroo.rmq.cloudamqp.com
   user:
     image: kedith/user-conference:latest
     container_name: user-service
@@ -23,13 +20,10 @@ services:
       - 4005:4000
     depends_on:
       - userDb
-      - rabbitmq
-    links:
-      - rabbitmq
     environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_DEFAULT_USER: tfavcusn
+      RABBITMQ_DEFAULT_PASS: vr7hadAWY3fVvmTMgUJ-VwDsf_otp7yU
+      RABBITMQ_HOST: kangaroo.rmq.cloudamqp.com
   confDb:
     container_name: db
     image: postgres:11.0
@@ -53,27 +47,6 @@ services:
       POSTGRES_PASSWORD: "postgres"
     volumes:
       - data-volume:/var/lib/userDb
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq-container
-    ports:
-      - 5672:5672
-      - 15672:15672
-    healthcheck: 
-      test: ["CMD", "curl","-f", "http://localhost:15672"]
-      interval: 50s
-      timeout: 10s
-      retries: 5
-    volumes:
-      - etc-rabbit-volume:/var/etc/rabbitmq/
-      - data-rabbit-volume:/var/lib/rabbitmq/
-      - logs-rabbit-volume:/var/log/rabbitmq/
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
 volumes:
   db-data:
   data-volume:
-  etc-rabbit-volume:
-  data-rabbit-volume:
-  logs-rabbit-volume:

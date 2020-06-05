@@ -11,13 +11,13 @@ defmodule Conference.Consumer do
   @queue_error "#{@queue}_error"
 
   def init(_opts) do
-    hostname = System.get_env("RABBITMQ_HOST")
-    username = System.get_env("RABBITMQ_DEFAULT_USER")
-    password = System.get_env("RABBITMQ_DEFAULT_PASS")
-    options = [host: hostname, port: 5672, virtual_host: "/", username: username, password: password]
-
-    {:ok, conn} = Connection.open(options, :undefined)
-    {:ok, chan} = Channel.open(conn)
+    # AMQP.Connection.open("amqp://guest:guest@localhost", "a-connection-with-a-name")
+    # hostname = System.get_env("RABBITMQ_HOST")
+    # username = System.get_env("RABBITMQ_DEFAULT_USER")
+    # password = System.get_env("RABBITMQ_DEFAULT_PASS")
+    # options = [host: hostname, port: 5672, virtual_host: "/", username: username, password: password]
+    {:ok, connection} = AMQP.Connection.open("amqp://tfavcusn:vr7hadAWY3fVvmTMgUJ-VwDsf_otp7yU@kangaroo.rmq.cloudamqp.com/tfavcusn", :undefined)
+    {:ok, chan} = AMQP.Channel.open(connection)
     setup_queue(chan)
 
     # Limit unacknowledged messages to 10
