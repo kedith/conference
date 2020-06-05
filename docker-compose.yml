@@ -1,19 +1,28 @@
 version: '3.7'
 
 services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    container_name: dev_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - nginx-data:/var/www/html
+    ports:
+      - 80:80
   conference:
     container_name: conference-service
     image: kedith/conference:latest
     restart: always
     ports:
-      - 4004:8080
+      - 4004:80
     depends_on:
       - confDb
   user:
     image: kedith/user-conference:latest
     container_name: user-service
     ports:
-      - 4005:8080
+      - 4005:80
     depends_on:
       - userDb
   confDb:
@@ -42,3 +51,4 @@ services:
 volumes:
   db-data:
   data-volume:
+  nginx-data:
