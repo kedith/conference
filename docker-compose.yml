@@ -9,10 +9,6 @@ services:
       - 4004:4000
     depends_on:
       - confDb
-    environment:
-      RABBITMQ_DEFAULT_USER: tfavcusn
-      RABBITMQ_DEFAULT_PASS: vr7hadAWY3fVvmTMgUJ-VwDsf_otp7yU
-      RABBITMQ_HOST: kangaroo.rmq.cloudamqp.com
   user:
     image: kedith/user-conference:latest
     container_name: user-service
@@ -20,10 +16,6 @@ services:
       - 4005:4000
     depends_on:
       - userDb
-    environment:
-      RABBITMQ_DEFAULT_USER: tfavcusn
-      RABBITMQ_DEFAULT_PASS: vr7hadAWY3fVvmTMgUJ-VwDsf_otp7yU
-      RABBITMQ_HOST: kangaroo.rmq.cloudamqp.com
   confDb:
     container_name: db
     image: postgres:11.0

@@ -1,12 +1,6 @@
 #===========
 #Build Stage
 #===========
-
-FROM rabbitmq:3-management
-RUN apt-get update
-RUN apt-get install -y curl 
-EXPOSE 5672 15672
-
 FROM bitwalker/alpine-elixir:1.10.3 as build
 
 ENV MIX_ENV=prod \
