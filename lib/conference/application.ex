@@ -12,7 +12,7 @@ defmodule Conference.Application do
         scheme: :http,
         plug: Conference.Plug.Router,
         options: [
-          port: 80
+          port: 8080
         ]
       },
       {Conference.Consumer, []},
