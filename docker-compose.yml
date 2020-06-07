@@ -6,9 +6,7 @@ services:
     restart: always
     container_name: dev_nginx
     ports:
-      - 80:80
-    environment:
-      - NGINX_HOST=example.com
+      - 8080:80
     depends_on:
           - user
           - conference
@@ -17,14 +15,14 @@ services:
     image: kedith/conference:latest
     restart: always
     ports:
-      - 4004:8080
+      - 4004:4000
     depends_on:
       - confDb
   user:
     image: kedith/user-conference:latest
     container_name: user
     ports:
-      - 4005:8080
+      - 4005:4000
     depends_on:
       - userDb
   confDb:
