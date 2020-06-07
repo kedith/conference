@@ -56,3 +56,429 @@
      Reason:     reached_max_restart_intensity
      Offender:   [{pid,<0.378.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.377.0>,{amqp_params_network,<<"guest">>,<<"jwCOBLkSqFXmiA+/vmtiUa9vznwLqAgnQSnsmwvu0+F5W4PjzlQHi/WgVNwAnqxN">>,<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
 
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.663.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.664.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.665.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.666.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.665.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4656
+  neighbours:
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.667.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.668.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.637.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.669.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.670.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.671.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.638.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.672.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =SUPERVISOR REPORT====
+     Supervisor: {<0.662.0>,'Elixir.DBConnection.ConnectionPool.Pool'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.665.0>},{id,{'Elixir.Postgrex.Protocol',<0.661.0>,3}},{mfargs,{'Elixir.DBConnection.Connection',start_link,['Elixir.Postgrex.Protocol',[{pool_index,3},{types,'Elixir.Postgrex.DefaultTypes'},{hostname,<<"localhost">>},{port,5432},{repo,'Elixir.Conference.Repository.TalkRepo'},{telemetry_prefix,[conference,repository,talk_repo]},{otp_app,conference},{timeout,15000},{pool_size,10},{pool,'Elixir.DBConnection.ConnectionPool'}],<0.661.0>,#Ref<0.1871405841.752746497.194845>]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.667.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.669.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.670.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.663.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.639.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.664.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.673.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.640.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.641.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.642.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.643.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.644.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =SUPERVISOR REPORT====
+     Supervisor: {<0.662.0>,'Elixir.DBConnection.ConnectionPool.Pool'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.667.0>},{id,{'Elixir.Postgrex.Protocol',<0.661.0>,5}},{mfargs,{'Elixir.DBConnection.Connection',start_link,['Elixir.Postgrex.Protocol',[{pool_index,5},{types,'Elixir.Postgrex.DefaultTypes'},{hostname,<<"localhost">>},{port,5432},{repo,'Elixir.Conference.Repository.TalkRepo'},{telemetry_prefix,[conference,repository,talk_repo]},{otp_app,conference},{timeout,15000},{pool_size,10},{pool,'Elixir.DBConnection.ConnectionPool'}],<0.661.0>,#Ref<0.1871405841.752746497.194845>]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.673.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4628
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.672.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.674.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.671.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.641.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.636.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.636.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.668.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.DBConnection.Connection:init/1
+    pid: <0.666.0>
+    registered_name: []
+    exception exit: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]},[{'Elixir.Connection',enter_stop,5,[{file,"lib/connection.ex"},{line,686}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.662.0>,'Elixir.DBConnection.ConnectionPool.Supervisor','Elixir.DBConnection.App',<0.439.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.662.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 17731
+    stack_size: 27
+    reductions: 4643
+  neighbours:
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.645.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.650.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.646.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.651.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.652.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.653.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =SUPERVISOR REPORT====
+     Supervisor: {<0.662.0>,'Elixir.DBConnection.ConnectionPool.Pool'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.669.0>},{id,{'Elixir.Postgrex.Protocol',<0.661.0>,7}},{mfargs,{'Elixir.DBConnection.Connection',start_link,['Elixir.Postgrex.Protocol',[{pool_index,7},{types,'Elixir.Postgrex.DefaultTypes'},{hostname,<<"localhost">>},{port,5432},{repo,'Elixir.Conference.Repository.TalkRepo'},{telemetry_prefix,[conference,repository,talk_repo]},{otp_app,conference},{timeout,15000},{pool_size,10},{pool,'Elixir.DBConnection.ConnectionPool'}],<0.661.0>,#Ref<0.1871405841.752746497.194845>]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.675.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.654.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.655.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.656.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.657.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.658.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =ERROR REPORT====
+** Generic server <0.659.0> terminating 
+** Last message in was nil
+** When Server state == 'Elixir.Postgrex.Protocol'
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-06-06 22:02:30 =SUPERVISOR REPORT====
+     Supervisor: {<0.636.0>,'Elixir.DBConnection.ConnectionPool.Pool'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details">>},[{'Elixir.Keyword','fetch!',2,[{file,"lib/keyword.ex"},{line,399}]},{'Elixir.Postgrex.Protocol',connect,1,[{file,"lib/postgrex/protocol.ex"},{line,92}]},{'Elixir.DBConnection.Connection',connect,2,[{file,"lib/db_connection/connection.ex"},{line,69}]},{'Elixir.Connection',enter_connect,5,[{file,"lib/connection.ex"},{line,622}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.641.0>},{id,{'Elixir.Postgrex.Protocol',<0.635.0>,5}},{mfargs,{'Elixir.DBConnection.Connection',start_link,['Elixir.Postgrex.Protocol',[{pool_index,5},{types,'Elixir.Postgrex.DefaultTypes'},{hostname,<<"localhost">>},{port,5432},{repo,'Elixir.Conference.Repository.ArticleRepo'},{telemetry_prefix,[conference,repository,article_repo]},{otp_app,conference},{timeout,15000},{pool_size,10},{pool,'Elixir.DBConnection.ConnectionPool'}],<0.635.0>,#Ref<0.1871405841.752746498.188707>]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+

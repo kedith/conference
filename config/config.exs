@@ -1,5 +1,17 @@
 import Config
 
+config :logger, 
+        backends: [
+          {Conference.Logging.JsonLogger, :json
+          Conference.Logging.JsonLoggerTCP, :logstash}
+        ]
+config :logger, :json, level: :info
+
+config :logger, :logstash,
+      level: :debug,
+      host: 'localhost',
+      port: 5044
+
 config :conference, ecto_repos: [Conference.Repository.UserDetailsRepo, Conference.Repository.ArticleRepo,
                       Conference.Repository.TalkRepo]
 

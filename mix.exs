@@ -45,7 +45,11 @@ defmodule Conference.MixProject do
       {:poison, "~> 3.0"},
       {:joken, "~> 2.2.0"},
       {:jsonapi, "~> 1.3"},
-      {:amqp, "~> 1.4"}
+      {:amqp, "~> 1.4"},
+      {:prometheus_ex, "~> 3.0"},
+      {:prometheus_plugs, "~> 1.1"},
+      {:accept, "~> 0.1"}
+      
     ]
   end
 end

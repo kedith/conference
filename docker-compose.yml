@@ -39,6 +39,26 @@ services:
       POSTGRES_PASSWORD: "postgres"
     volumes:
       - data-volume:/var/lib/userDb
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.7.1
+    volumes: 
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - 9600:9600
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment: 
+      - discovery.type=single-node
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.7.1
+    ports:
+      - 5601:5601
 volumes:
   db-data:
   data-volume:
+

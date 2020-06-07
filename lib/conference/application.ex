@@ -16,6 +16,7 @@ defmodule Conference.Application do
         ]
       },
       {Conference.Consumer, []},
+  
       Conference.Repository.ArticleRepo,
       Conference.Repository.UserDetailsRepo,
       Conference.Repository.TalkRepo,
