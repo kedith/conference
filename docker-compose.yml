@@ -31,6 +31,7 @@ services:
       PGDATA: "/var/lib/postgresql/data"
   userDb:
     image: postgres:11.0
+    container_name: userDb
     ports:
       - 5433:5432
     environment:
@@ -44,7 +45,7 @@ services:
     volumes: 
       - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     ports:
-      - 9600:9600
+      - 5044:5044
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
     container_name: elasticsearch
