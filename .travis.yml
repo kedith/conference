@@ -25,7 +25,7 @@ jobs:
         - docker build -t conference_service .
         - docker images
         - docker tag conference_service $DOCKER_USERNAME/conference
-        - docker push $DOCKER_USERNAME/conference
+        - docker push $DOCKER_USERNAME/conference:simple
     - stage: test
       install:
         - docker-compose up -d
